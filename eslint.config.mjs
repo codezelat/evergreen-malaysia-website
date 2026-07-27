@@ -9,7 +9,6 @@ export default defineConfig([
     ".next/**",
     "out/**",
     "build/**",
-    "next-env.d.ts",
-    "design-assets/**"
+    "next-env.d.ts"
   ]),
 ]);
