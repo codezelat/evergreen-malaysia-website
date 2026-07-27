@@ -3,16 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 const footerNavigation = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Industries", href: "#industries" },
-  { label: "News & CSR", href: "#news" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Our Industries", href: "/our-industries" },
+  { label: "News & CSR", href: "/news-csr" },
+  { label: "Contact Us", href: "/contact-us" },
+];
+
+const legalNavigation = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
 
 export function SiteFooter() {
   return (
     <footer className="bg-[#151716] text-white">
-      <div className="site-container grid gap-12 py-14 md:grid-cols-[1.3fr_0.7fr_1fr] lg:py-16">
+      <div className="site-container grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.2fr_0.65fr_0.7fr_1fr] lg:py-16">
         <div className="max-w-md">
           <Image
             src="/images/home/evergreen-malaysia-logo.png"
@@ -25,6 +33,24 @@ export function SiteFooter() {
             Creating enduring, energy-conscious lighting experiences for homes,
             businesses, and landmark spaces across Malaysia.
           </p>
+        </div>
+
+        <div>
+          <h2 className="mb-5 text-xs font-bold uppercase tracking-[0.12em]">
+            Information
+          </h2>
+          <ul className="space-y-3">
+            {legalNavigation.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="focus-ring text-sm text-white/58 transition-colors hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -68,7 +94,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="site-container py-5 text-[0.68rem] text-white/45">
+        <div className="site-container py-5 text-[0.68rem] text-white/60">
           <p>
             © {new Date().getFullYear()} Evergreen Lighting Malaysia. All
             Rights Reserved.

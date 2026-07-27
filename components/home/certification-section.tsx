@@ -24,7 +24,7 @@ export function CertificationSection() {
             energy-efficient technology gives designers, project teams, and
             homeowners confidence from specification through installation.
           </p>
-          <ArrowLink href="#contact" inverse className="mt-7">
+          <ArrowLink href="/about-us" inverse className="mt-7">
             View Our Standards
           </ArrowLink>
         </div>

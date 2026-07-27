@@ -30,7 +30,7 @@ export function IndustriesSection() {
             and design-led spaces—built around how each environment needs to
             look, feel, and perform.
           </p>
-          <ArrowLink href="#contact" className="shrink-0">
+          <ArrowLink href="/our-industries" className="shrink-0">
             Explore All Our Industries
           </ArrowLink>
         </Reveal>

@@ -41,7 +41,7 @@ export function NewsSection() {
               Latest Updates &amp; Innovations in Lighting Solutions
             </h2>
           </div>
-          <ArrowLink href="#contact" inverse className="shrink-0">
+          <ArrowLink href="/news-csr" inverse className="shrink-0">
             Explore All News &amp; CSR
           </ArrowLink>
         </Reveal>
@@ -71,7 +71,7 @@ export function NewsSection() {
                     {item.summary}
                   </p>
                   <Link
-                    href="#contact"
+                    href="/news-csr"
                     aria-label={`Read ${item.title}`}
                     className="focus-ring mt-7 inline-flex items-center gap-2 self-start text-[0.68rem] font-bold uppercase tracking-[0.08em]"
                   >

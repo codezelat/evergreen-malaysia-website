@@ -33,7 +33,7 @@ export function EcoSection() {
               <ArrowLeft aria-hidden="true" className="size-4" />
               <ArrowRight aria-hidden="true" className="size-4" />
             </div>
-            <ArrowLink href="#industries">Read More</ArrowLink>
+            <ArrowLink href="/about-us">Read More</ArrowLink>
           </div>
         </div>
 

@@ -21,7 +21,7 @@ export function Hero() {
         alt="Sculptural Evergreen lighting installation in a modern interior"
         fill
         priority
-        quality={90}
+        quality={82}
         sizes="100vw"
         className="object-cover object-center"
       />
@@ -52,23 +52,26 @@ export function Hero() {
           </Link>
         </div>
 
-        <dl className="mt-12 grid max-w-[45rem] grid-cols-2 gap-x-5 gap-y-7 border-t border-white/20 pt-7 sm:grid-cols-4">
+        <ul
+          aria-label="Evergreen at a glance"
+          className="mt-12 grid max-w-[45rem] grid-cols-2 gap-x-5 gap-y-7 border-t border-white/20 pt-7 sm:grid-cols-4"
+        >
           {stats.map(({ value, label, icon: Icon }) => (
-            <div key={label} className="flex items-center gap-3">
+            <li key={label} className="flex items-center gap-3">
               <Icon
                 aria-hidden="true"
                 className="size-6 shrink-0 text-evergreen-500"
                 strokeWidth={1.5}
               />
               <div>
-                <dt className="text-[0.62rem] font-medium text-white/58">
+                <p className="text-[0.62rem] font-medium text-white/62">
                   {label}
-                </dt>
-                <dd className="text-lg font-bold tracking-tight">{value}</dd>
+                </p>
+                <p className="text-lg font-bold tracking-tight">{value}</p>
               </div>
-            </div>
+            </li>
           ))}
-        </dl>
+        </ul>
       </div>
     </section>
   );

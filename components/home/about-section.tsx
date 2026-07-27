@@ -34,7 +34,7 @@ export function AboutSection() {
                 buildings, our collections bring together form, function, and
                 energy-conscious technology.
               </p>
-              <ArrowLink href="#experience" className="mt-8">
+              <ArrowLink href="/about-us" className="mt-8">
                 Read More About Us
               </ArrowLink>
             </div>

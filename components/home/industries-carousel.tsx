@@ -84,7 +84,7 @@ export function IndustriesCarousel() {
                     {slide.description}
                   </p>
                   <Link
-                    href="#contact"
+                    href="/our-industries"
                     tabIndex={selectedIndex === index ? 0 : -1}
                     className="focus-ring mt-6 inline-flex items-center gap-2 text-[0.7rem] font-bold uppercase tracking-[0.08em]"
                   >

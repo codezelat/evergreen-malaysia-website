@@ -13,6 +13,12 @@ const montserrat = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evergreenmalaysia.com"),
+  applicationName: "Evergreen Lighting Malaysia",
+  authors: [{ name: "Evergreen Lighting Malaysia" }],
+  creator: "Evergreen Lighting Malaysia",
+  publisher: "Evergreen Lighting Malaysia",
+  category: "Lighting",
+  manifest: "/manifest.webmanifest",
   title: {
     default: "Evergreen Lighting Malaysia | Illuminate Your World",
     template: "%s | Evergreen Lighting Malaysia",
@@ -58,6 +64,22 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
+  formatDetection: {
+    address: false,
+    email: false,
+    telephone: false,
   },
 };
 
