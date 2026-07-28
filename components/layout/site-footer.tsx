@@ -25,8 +25,9 @@ export function SiteFooter() {
           <Image
             src="/images/home/evergreen-malaysia-logo.png"
             alt="Evergreen Malaysia Limited"
-            width={268}
-            height={71}
+            width={989}
+            height={252}
+            quality={90}
             className="mb-6 h-auto w-40"
           />
           <p className="text-sm leading-7 text-white/58">

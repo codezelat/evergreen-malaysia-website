@@ -15,7 +15,7 @@ export function NewsCard({ article }: { article: NewsArticle }) {
             src={article.image}
             alt=""
             fill
-            quality={82}
+            quality={90}
             sizes="(max-width: 768px) 100vw, 420px"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
           />

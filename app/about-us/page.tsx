@@ -39,8 +39,8 @@ export default function AboutPage() {
         <InnerPageHero
           eyebrow="Evergreen Malaysia Limited"
           title="Making Quality, Eco-Friendly Lighting Mainstream"
-          image="/images/pages/about-hero.webp"
-          imageAlt="Energy-efficient lamp surrounded by greenery"
+          image="/images/pages/about-hero-green.webp"
+          imageAlt="A naturally lit interior filled with greenery"
           stats={[
             { value: "25+", label: "Years" },
             { value: "600+", label: "Products" },
@@ -72,10 +72,10 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[1.25/1] overflow-hidden">
               <Image
-                src="/images/pages/about-interior.webp"
+                src="/images/pages/about-interior-project.webp"
                 alt="A warmly lit Evergreen interior"
                 fill
-                quality={82}
+                quality={90}
                 sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-cover"
               />
@@ -91,6 +91,7 @@ export default function AboutPage() {
                   src="/images/pages/vision-eye.webp"
                   alt=""
                   fill
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover"
                 />
@@ -127,6 +128,7 @@ export default function AboutPage() {
                   src="/images/pages/mission-technology.webp"
                   alt=""
                   fill
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover"
                 />
@@ -140,10 +142,10 @@ export default function AboutPage() {
             <Reveal className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
               <div className="relative aspect-[1.35/1] overflow-hidden">
                 <Image
-                  src="/images/pages/team-history.webp"
-                  alt="Evergreen team members"
+                  src="/images/pages/team-at-work.webp"
+                  alt="Lighting professionals at work on a project"
                   fill
-                  quality={82}
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 480px"
                   className="object-cover"
                 />
@@ -200,10 +202,11 @@ export default function AboutPage() {
               </p>
             </div>
             <Image
-              src="/images/pages/certifications.webp"
+              src="/images/home/certifications.webp"
               alt="Lighting certification and quality marks"
-              width={421}
-              height={228}
+              width={1684}
+              height={912}
+              quality={90}
               sizes="(max-width: 1024px) 90vw, 500px"
               className="h-auto w-full object-contain"
             />
@@ -228,9 +231,10 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square max-w-sm overflow-hidden justify-self-end">
               <Image
-                src="/images/pages/about-hero.webp"
+                src="/images/pages/about-hero-green.webp"
                 alt=""
                 fill
+                quality={90}
                 sizes="380px"
                 className="object-cover"
               />

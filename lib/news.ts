@@ -23,7 +23,7 @@ export const newsArticles: NewsArticle[] = [
     displayDate: "July 2025",
     excerpt:
       "Human-centric controls, connected systems, and flexible luminaires are changing how designers shape healthier, more efficient spaces.",
-    image: "/images/pages/article-hero.webp",
+    image: "/images/pages/industry-commercial.webp",
     sections: [
       {
         heading: "1. Human-Centric Lighting Comes Mainstream",
@@ -90,7 +90,7 @@ export const newsArticles: NewsArticle[] = [
     displayDate: "May 2025",
     excerpt:
       "Layered electric light can complement daylight and keep interiors comfortable as conditions change.",
-    image: "/images/pages/news-natural-light.webp",
+    image: "/images/pages/about-hero-green.webp",
     sections: [
       {
         heading: "Designing around changing daylight",

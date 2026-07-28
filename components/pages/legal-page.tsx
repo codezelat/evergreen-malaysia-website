@@ -35,10 +35,11 @@ export function LegalPage({
       <main>
         <section className="relative min-h-[26rem] overflow-hidden bg-evergreen-950 text-white">
           <Image
-            src="/images/pages/about-hero.webp"
+            src="/images/pages/about-hero-green.webp"
             alt=""
             fill
             priority
+            quality={90}
             sizes="100vw"
             className="object-cover opacity-[0.22]"
           />

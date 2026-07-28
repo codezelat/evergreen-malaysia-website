@@ -17,11 +17,11 @@ export function Hero() {
       className="relative min-h-svh overflow-hidden bg-evergreen-950 text-white"
     >
       <Image
-        src="/images/home/hero-lighting.jpg"
+        src="/images/pages/industry-designers.webp"
         alt="Sculptural Evergreen lighting installation in a modern interior"
         fill
         priority
-        quality={82}
+        quality={90}
         sizes="100vw"
         className="object-cover object-center"
       />

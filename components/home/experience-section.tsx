@@ -11,10 +11,10 @@ export function ExperienceSection() {
       <Reveal className="site-container grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="relative aspect-[1.5/1] min-h-64 overflow-hidden">
           <Image
-            src="/images/home/team.jpg"
-            alt="The Evergreen team"
+            src="/images/pages/industry-industrial.webp"
+            alt="A high-performance industrial lighting installation"
             fill
-            quality={82}
+            quality={90}
             sizes="(max-width: 1024px) 100vw, 600px"
             className="object-cover"
           />

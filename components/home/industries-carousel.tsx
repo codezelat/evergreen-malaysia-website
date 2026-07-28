@@ -12,21 +12,21 @@ const slides = [
     title: "Illuminate Your Home Life",
     description:
       "Create warmth, comfort, and character with lighting that complements your personal style and enhances everyday living.",
-    image: "/images/home/industry-residential.jpg",
+    image: "/images/pages/industry-residential.webp",
   },
   {
     label: "Industrial",
     title: "Lighting Built to Perform",
     description:
       "Reliable, efficient illumination designed for productive environments, demanding operating conditions, and safer work.",
-    image: "/images/home/industry-industrial.png",
+    image: "/images/pages/industry-industrial.webp",
   },
   {
     label: "Commercial",
     title: "Make Every Space Memorable",
     description:
       "Strategic lighting for retail, hospitality, and workplaces that balances atmosphere with high-performance visibility.",
-    image: "/images/home/industry-commercial.png",
+    image: "/images/pages/industry-commercial.webp",
   },
 ];
 
@@ -68,7 +68,7 @@ export function IndustriesCarousel() {
                   src={slide.image}
                   alt=""
                   fill
-                  quality={82}
+                  quality={90}
                   sizes="(max-width: 768px) 100vw, 1248px"
                   className="object-cover"
                 />

@@ -107,11 +107,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <main>
         <section className="relative min-h-[27rem] overflow-hidden bg-evergreen-950 text-white sm:min-h-[31rem]">
           <Image
-            src="/images/pages/article-header.webp"
+            src="/images/pages/news-sustainable.webp"
             alt=""
             fill
             priority
-            quality={82}
+            quality={90}
             sizes="100vw"
             className="object-cover"
           />
@@ -137,7 +137,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   alt=""
                   fill
                   priority
-                  quality={82}
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 1000px"
                   className="object-cover"
                 />

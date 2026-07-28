@@ -82,7 +82,7 @@ export default function IndustriesPage() {
                   alt=""
                   fill
                   priority
-                  quality={82}
+                  quality={90}
                   sizes="(max-width: 640px) 34vw, 20vw"
                   className="object-cover"
                 />
@@ -130,7 +130,7 @@ export default function IndustriesPage() {
                     src={industry.image}
                     alt={industry.imageAlt}
                     fill
-                    quality={82}
+                    quality={90}
                     sizes="(max-width: 1024px) 100vw, 600px"
                     className="object-cover transition-transform duration-700 hover:scale-[1.025]"
                   />

@@ -47,9 +47,9 @@ export const metadata: Metadata = {
       "Innovative, energy-efficient lighting for homes, commercial spaces, and architectural projects.",
     images: [
       {
-        url: "/images/home/hero-lighting.jpg",
-        width: 512,
-        height: 287,
+        url: "/images/pages/industry-designers.webp",
+        width: 2400,
+        height: 1004,
         alt: "Evergreen Lighting feature installation in a modern interior",
       },
     ],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Evergreen Lighting Malaysia",
     description:
       "Innovative, energy-efficient lighting for spaces that inspire.",
-    images: ["/images/home/hero-lighting.jpg"],
+    images: ["/images/pages/industry-designers.webp"],
   },
   robots: {
     index: true,

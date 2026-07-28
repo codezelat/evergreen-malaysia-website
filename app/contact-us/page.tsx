@@ -41,6 +41,7 @@ export default function ContactPage() {
                 alt=""
                 fill
                 priority
+                quality={90}
                 sizes="50vw"
                 className="object-cover object-center"
               />
@@ -51,6 +52,7 @@ export default function ContactPage() {
                 alt=""
                 fill
                 priority
+                quality={90}
                 sizes="50vw"
                 className="object-cover object-center"
               />
@@ -143,6 +145,7 @@ export default function ContactPage() {
                       src="/images/pages/distributor-map.webp"
                       alt={`Map showing the ${location.name} distributor area`}
                       fill
+                      quality={90}
                       sizes="(max-width: 1024px) 100vw, 380px"
                       className={`object-cover ${
                         index === 0 ? "object-left" : "object-right"

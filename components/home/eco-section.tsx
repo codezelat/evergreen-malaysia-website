@@ -39,10 +39,10 @@ export function EcoSection() {
 
         <div className="relative aspect-square w-full max-w-[31rem] justify-self-end overflow-hidden">
           <Image
-            src="/images/home/eco-lightbulb.png"
-            alt="Energy-efficient lightbulb surrounded by greenery"
+            src="/images/pages/about-hero-green.webp"
+            alt="A naturally lit interior filled with greenery"
             fill
-            quality={82}
+            quality={90}
             sizes="(max-width: 1024px) 80vw, 470px"
             className="object-cover"
           />

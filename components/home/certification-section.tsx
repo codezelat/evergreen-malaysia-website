@@ -30,10 +30,11 @@ export function CertificationSection() {
         </div>
 
         <Image
-          src="/images/home/certifications.png"
+          src="/images/home/certifications.webp"
           alt="Evergreen lighting certifications and quality marks"
-          width={421}
-          height={228}
+          width={1684}
+          height={912}
+          quality={90}
           sizes="(max-width: 1024px) 70vw, 390px"
           className="h-auto w-full max-w-[28rem] justify-self-start object-contain lg:justify-self-end"
         />

@@ -29,7 +29,7 @@ export function InnerPageHero({
         alt={imageAlt}
         fill
         priority={priority}
-        quality={82}
+        quality={90}
         sizes="100vw"
         className="object-cover"
       />

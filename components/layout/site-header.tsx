@@ -39,8 +39,9 @@ export function SiteHeader() {
           <Image
             src="/images/home/evergreen-malaysia-logo.png"
             alt="Evergreen Malaysia Limited"
-            width={268}
-            height={71}
+            width={989}
+            height={252}
+            quality={90}
             priority
             className="h-auto w-[9.4rem]"
           />

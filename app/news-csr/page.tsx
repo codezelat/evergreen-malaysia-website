@@ -61,7 +61,7 @@ export default function NewsPage() {
                     src={featured.image}
                     alt=""
                     fill
-                    quality={82}
+                    quality={90}
                     sizes="(max-width: 1024px) 100vw, 600px"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                   />

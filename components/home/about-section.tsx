@@ -44,10 +44,10 @@ export function AboutSection() {
         <Reveal delay={0.08} className="mt-14 sm:mt-16">
           <div className="relative aspect-[16/6.2] min-h-64 overflow-hidden">
             <Image
-              src="/images/home/about-evening.jpg"
-              alt="A warmly lit hospitality space at night"
+              src="/images/home/about-evening.webp"
+              alt="A warmly lit contemporary living space"
               fill
-              quality={82}
+              quality={90}
               sizes="(max-width: 768px) 100vw, 1248px"
               className="object-cover"
             />

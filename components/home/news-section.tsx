@@ -9,14 +9,14 @@ const newsItems = [
     title: "The Art of Architectural Innovation",
     summary:
       "How considered light, material, and form can turn practical spaces into memorable experiences.",
-    image: "/images/home/news-smart-lighting.png",
+    image: "/images/pages/industry-hero-decorative.webp",
     date: "Design Insight",
   },
   {
     title: "Sustainable Lighting Solutions",
     summary:
       "A practical look at efficient LED choices that reduce energy use without compromising atmosphere.",
-    image: "/images/home/news-sustainable-lighting.jpg",
+    image: "/images/pages/news-sustainable.webp",
     date: "Sustainability",
   },
 ];
@@ -55,7 +55,7 @@ export function NewsSection() {
                     src={item.image}
                     alt=""
                     fill
-                    quality={82}
+                    quality={90}
                     sizes="(max-width: 640px) 100vw, 320px"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                   />

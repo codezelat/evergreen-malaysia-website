@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/images/home/evergreen-malaysia-logo.png" alt="Evergreen Lighting Malaysia" width="260" />
+  <img src="./public/images/home/evergreen-malaysia-logo-dark.png" alt="Evergreen Lighting Malaysia" width="260" />
 </p>
 
 <h1 align="center">Evergreen Lighting Malaysia</h1>
@@ -22,9 +22,7 @@
 
 ![Evergreen Lighting Malaysia desktop homepage](./docs/screenshots/home-desktop.webp)
 
-<p align="center">
-  <img src="./docs/screenshots/home-mobile.webp" alt="Evergreen Lighting Malaysia mobile homepage" width="390" />
-</p>
+![Evergreen Lighting Malaysia About page](./docs/screenshots/about-desktop.webp)
 
 ## 🌿 What this website delivers
 
