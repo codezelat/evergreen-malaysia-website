@@ -11,6 +11,9 @@ export type NewsArticle = {
   displayDate: string;
   excerpt: string;
   image: string;
+  imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   sections: ArticleSection[];
 };
 
@@ -24,6 +27,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Human-centric controls, connected systems, and flexible luminaires are changing how designers shape healthier, more efficient spaces.",
     image: "/images/pages/industry-commercial.webp",
+    imageAlt:
+      "Layered architectural lighting across a contemporary commercial interior",
+    imageWidth: 2200,
+    imageHeight: 1332,
     sections: [
       {
         heading: "1. Human-Centric Lighting Comes Mainstream",
@@ -66,6 +73,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "A practical guide to revealing material, depth, and movement while keeping the light source visually quiet.",
     image: "/images/pages/news-smart-lighting.webp",
+    imageAlt:
+      "Architectural lighting highlighting material and depth in a modern space",
+    imageWidth: 2048,
+    imageHeight: 1148,
     sections: [
       {
         heading: "Light should reveal the architecture",
@@ -91,6 +102,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Layered electric light can complement daylight and keep interiors comfortable as conditions change.",
     image: "/images/pages/about-hero-green.webp",
+    imageAlt:
+      "A naturally lit green interior supported by soft electric lighting",
+    imageWidth: 2400,
+    imageHeight: 2400,
     sections: [
       {
         heading: "Designing around changing daylight",
@@ -110,6 +125,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "How efficient sources, durable components, and thoughtful controls reduce the lifetime impact of a lighting scheme.",
     image: "/images/pages/news-sustainable.webp",
+    imageAlt:
+      "Energy-conscious lighting integrated into a contemporary interior",
+    imageWidth: 2400,
+    imageHeight: 1600,
     sections: [
       {
         heading: "Efficiency begins with the lighting plan",
@@ -129,6 +148,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Simple scenes and responsive controls can make everyday lighting more comfortable without making it complicated.",
     image: "/images/pages/news-office.webp",
+    imageAlt:
+      "Connected office lighting supporting a flexible modern workspace",
+    imageWidth: 2400,
+    imageHeight: 1753,
     sections: [
       {
         heading: "Useful automation feels effortless",
@@ -148,6 +171,10 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Clear, efficient illumination can improve safety and access while respecting neighbours and the night environment.",
     image: "/images/pages/news-smart-lighting.webp",
+    imageAlt:
+      "Controlled exterior lighting creating clear and comfortable visibility",
+    imageWidth: 2048,
+    imageHeight: 1148,
     sections: [
       {
         heading: "Light only where it is needed",

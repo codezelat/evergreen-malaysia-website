@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { newsArticles } from "@/lib/news";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUpdated = new Date("2026-07-27");
+  const siteUpdated = new Date("2026-07-29");
   const pages: MetadataRoute.Sitemap = [
     {
       url: "https://evergreenmalaysia.com",

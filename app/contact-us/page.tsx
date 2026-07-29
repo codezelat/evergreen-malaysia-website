@@ -1,32 +1,59 @@
-import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { ContactForm } from "@/components/pages/contact-form";
+import { InteractiveMap } from "@/components/pages/interactive-map";
 import { Reveal } from "@/components/ui/reveal";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Contact Us",
   description:
     "Contact Evergreen Lighting Malaysia for residential, commercial, industrial, and custom lighting enquiries.",
-  alternates: { canonical: "/contact-us" },
+  path: "/contact-us",
+  image: "/images/pages/contact-consultation.webp",
+  imageAlt:
+    "Evergreen Lighting specialists discussing a lighting project consultation",
+  imageWidth: 2048,
+  imageHeight: 1368,
+});
+
+type Location = {
+  name: string;
+  address: string;
+  email: string;
+  note?: string;
+  phone?: string;
+  phoneHref?: string;
+  mapTitle: string;
+  mapQuery: string;
+  mapUrl: string;
 };
 
 const locations = [
   {
     name: "Malaysia",
-    address: "Evergreen Lighting Malaysia",
+    address: "Project enquiries and lighting support across Malaysia",
     email: "evergreenlk@gmail.com",
-    phone: "Malaysia project enquiries",
+    note: "Please contact the team before arranging an in-person visit.",
+    mapTitle: "Evergreen Lighting Malaysia service area",
+    mapQuery: "Malaysia",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Malaysia",
   },
   {
     name: "Sri Lanka Group",
-    address: "175 Minuwangoda Road, Ekala, Sri Lanka",
+    address: "175 Minuwangoda Road, Ekala, Ja-Ela 11380, Sri Lanka",
     email: "sandun@evergreen.lk",
     phone: "+94 71 727 0222",
+    phoneHref: "+94717270222",
+    mapTitle: "Evergreen Lighting & Electrical Lanka, Ekala",
+    mapQuery:
+      "Evergreen Lighting & Electrical Lanka, 175 Minuwangoda Road, Ekala, Ja-Ela 11380, Sri Lanka",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Evergreen%20Lighting%20%26%20Electrical%20Lanka%2C%20175%20Minuwangoda%20Road%2C%20Ekala%2C%20Ja-Ela%2011380%2C%20Sri%20Lanka",
   },
-];
+] satisfies Location[];
 
 export default function ContactPage() {
   return (
@@ -96,8 +123,12 @@ export default function ContactPage() {
             <Reveal className="text-center">
               <p className="eyebrow">Our Network</p>
               <h2 className="mt-3 text-3xl font-bold tracking-[-0.045em] sm:text-4xl">
-                Authorized distributors
+                Locations &amp; group contacts
               </h2>
+              <p className="body-copy mx-auto mt-4 max-w-3xl">
+                Reach our Malaysia project team by email, or contact and locate
+                the Evergreen Lighting group office in Sri Lanka.
+              </p>
             </Reveal>
 
             <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -105,7 +136,7 @@ export default function ContactPage() {
                 <Reveal
                   key={location.name}
                   delay={index * 0.08}
-                  className="grid overflow-hidden bg-white sm:grid-cols-[0.9fr_1.1fr]"
+                  className="overflow-hidden bg-white"
                 >
                   <div className="p-7 sm:p-9">
                     <h3 className="text-xl font-bold tracking-[-0.035em]">
@@ -131,27 +162,31 @@ export default function ContactPage() {
                           {location.email}
                         </a>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Phone
-                          aria-hidden="true"
-                          className="mt-1 size-4 shrink-0 text-evergreen-700"
-                        />
-                        {location.phone}
-                      </li>
+                      {location.phone && location.phoneHref ? (
+                        <li>
+                          <a
+                            href={`tel:${location.phoneHref}`}
+                            className="focus-ring flex items-start gap-3 transition-colors hover:text-evergreen-700"
+                          >
+                            <Phone
+                              aria-hidden="true"
+                              className="mt-1 size-4 shrink-0 text-evergreen-700"
+                            />
+                            {location.phone}
+                          </a>
+                        </li>
+                      ) : null}
                     </ul>
+                    <p className="mt-5 text-xs leading-5 text-black/48">
+                      {location.note ??
+                        "Call or email the Sri Lanka group office before visiting."}
+                    </p>
                   </div>
-                  <div className="relative min-h-64 bg-white">
-                    <Image
-                      src="/images/pages/distributor-map.webp"
-                      alt={`Map showing the ${location.name} distributor area`}
-                      fill
-                      quality={90}
-                      sizes="(max-width: 1024px) 100vw, 380px"
-                      className={`object-cover ${
-                        index === 0 ? "object-left" : "object-right"
-                      }`}
-                    />
-                  </div>
+                  <InteractiveMap
+                    title={location.mapTitle}
+                    query={location.mapQuery}
+                    externalUrl={location.mapUrl}
+                  />
                 </Reveal>
               ))}
             </div>

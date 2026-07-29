@@ -1,4 +1,3 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { ArrowLink } from "@/components/ui/arrow-link";
 import { Reveal } from "@/components/ui/reveal";
@@ -28,13 +27,9 @@ export function EcoSection() {
             technology, lasting performance, and thoughtful product selection
             to reduce waste while preserving atmosphere and comfort.
           </p>
-          <div className="mt-8 flex items-center justify-between gap-6">
-            <div className="flex gap-2 text-evergreen-900">
-              <ArrowLeft aria-hidden="true" className="size-4" />
-              <ArrowRight aria-hidden="true" className="size-4" />
-            </div>
-            <ArrowLink href="/about-us">Read More</ArrowLink>
-          </div>
+          <ArrowLink href="/about-us" className="mt-8">
+            Read More
+          </ArrowLink>
         </div>
 
         <div className="relative aspect-square w-full max-w-[31rem] justify-self-end overflow-hidden">

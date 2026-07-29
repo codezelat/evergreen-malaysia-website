@@ -27,7 +27,20 @@ const websiteJsonLd = {
       "@id": "https://evergreenmalaysia.com/#organization",
       name: "Evergreen Lighting Malaysia",
       url: "https://evergreenmalaysia.com/",
-      logo: "https://evergreenmalaysia.com/icon.png",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://evergreenmalaysia.com/images/home/evergreen-malaysia-logo-dark.png",
+        width: 989,
+        height: 252,
+      },
+      image: {
+        "@type": "ImageObject",
+        url: "https://evergreenmalaysia.com/images/pages/industry-designers.webp",
+        width: 2400,
+        height: 1004,
+        caption:
+          "Sculptural Evergreen lighting installation in a modern interior",
+      },
       email: "evergreenlk@gmail.com",
       areaServed: {
         "@type": "Country",

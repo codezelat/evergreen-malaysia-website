@@ -22,7 +22,9 @@
 
 ![Evergreen Lighting Malaysia desktop homepage](./docs/screenshots/home-desktop.webp)
 
-![Evergreen Lighting Malaysia About page](./docs/screenshots/about-desktop.webp)
+<p align="center">
+  <img src="./docs/screenshots/home-mobile.webp" alt="Evergreen Lighting Malaysia mobile homepage" width="390" />
+</p>
 
 ## 🌿 What this website delivers
 
@@ -31,6 +33,8 @@
 - Smooth reveal and carousel motion with reduced-motion support
 - Server Components by default and narrowly scoped client-side interactivity
 - Complete company, industry, news, contact, legal, and accessibility content
+- Privacy-aware live Google Maps that load only after a visitor chooses to
+  connect
 - Static generation for fast delivery and predictable hosting costs
 - Canonical metadata, Open Graph cards, structured data, sitemap, and robots
 - Keyboard-friendly navigation, visible focus states, semantic landmarks, and
@@ -118,10 +122,11 @@ app/
 components/
 ├── home/                    Homepage sections and carousel
 ├── layout/                  Shared header and footer
-├── pages/                   Inner-page and legal-page components
+├── pages/                   Inner-page, map, form, and legal-page components
 ├── seo/                     Safe JSON-LD rendering
 └── ui/                      Shared links and motion primitives
 lib/
+├── metadata.ts              Shared canonical and social metadata builder
 └── news.ts                  Typed editorial content source
 public/images/
 ├── home/                    Optimized homepage assets
@@ -137,6 +142,8 @@ reference.
 The website has no database, authentication system, payment flow, analytics
 SDK, or advertising integration. The enquiry form prepares a message in the
 visitor's email application and does not submit personal data to a website API.
+Contact-page maps are click-to-load: no Google Maps request is made until the
+visitor explicitly loads a map or follows the external map link.
 
 Business details and approved copy must be treated as product data: confirm
 them with Evergreen before changing addresses, contact details, legal identity,

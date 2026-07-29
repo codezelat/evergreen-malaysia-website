@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,14 +6,19 @@ import { NewsCard } from "@/components/pages/news-card";
 import { Reveal } from "@/components/ui/reveal";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 import { newsArticles } from "@/lib/news";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "News & CSR",
   description:
     "Lighting insights, design developments, sustainability thinking, and community-focused updates from Evergreen Lighting Malaysia.",
-  alternates: { canonical: "/news-csr" },
-};
+  path: "/news-csr",
+  image: "/images/pages/news-hero.webp",
+  imageAlt: "A lighting specialist working with connected lighting controls",
+  imageWidth: 2048,
+  imageHeight: 1152,
+});
 
 export default function NewsPage() {
   const latest = newsArticles.slice(0, 4);

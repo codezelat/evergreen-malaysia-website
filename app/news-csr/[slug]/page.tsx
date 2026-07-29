@@ -32,10 +32,26 @@ export async function generateMetadata({
     alternates: { canonical: `/news-csr/${article.slug}` },
     openGraph: {
       type: "article",
+      locale: "en_MY",
+      url: `/news-csr/${article.slug}`,
+      siteName: "Evergreen Lighting Malaysia",
       title: article.title,
       description: article.excerpt,
       publishedTime: article.date,
-      images: [{ url: article.image }],
+      images: [
+        {
+          url: article.image,
+          width: article.imageWidth,
+          height: article.imageHeight,
+          alt: article.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [article.image],
     },
   };
 }
@@ -56,7 +72,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     headline: article.title,
     description: article.excerpt,
     datePublished: article.date,
-    image: `https://evergreenmalaysia.com${article.image}`,
+    image: {
+      "@type": "ImageObject",
+      url: `https://evergreenmalaysia.com${article.image}`,
+      width: article.imageWidth,
+      height: article.imageHeight,
+      caption: article.imageAlt,
+    },
     author: {
       "@type": "Organization",
       name: "Evergreen Lighting Malaysia",
@@ -68,7 +90,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       url: "https://evergreenmalaysia.com/",
       logo: {
         "@type": "ImageObject",
-        url: "https://evergreenmalaysia.com/icon.png",
+        url: "https://evergreenmalaysia.com/images/home/evergreen-malaysia-logo-dark.png",
+        width: 989,
+        height: 252,
       },
     },
     mainEntityOfPage: `https://evergreenmalaysia.com/news-csr/${article.slug}`,
@@ -107,7 +131,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <main>
         <section className="relative min-h-[27rem] overflow-hidden bg-evergreen-950 text-white sm:min-h-[31rem]">
           <Image
-            src="/images/pages/news-sustainable.webp"
+            src="/images/pages/news-hero.webp"
             alt=""
             fill
             priority
@@ -134,7 +158,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <div className="relative aspect-[1.35/1] overflow-hidden sm:aspect-[1.85/1]">
                 <Image
                   src={article.image}
-                  alt=""
+                  alt={article.imageAlt}
                   fill
                   priority
                   quality={90}

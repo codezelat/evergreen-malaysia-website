@@ -1,16 +1,20 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageCta } from "@/components/pages/page-cta";
 import { Reveal } from "@/components/ui/reveal";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Our Industries",
   description:
     "Residential, industrial, commercial, and designer lighting solutions from Evergreen Lighting Malaysia.",
-  alternates: { canonical: "/our-industries" },
-};
+  path: "/our-industries",
+  image: "/images/pages/industry-designers.webp",
+  imageAlt: "Sculptural lighting in a modern design-led interior",
+  imageWidth: 2400,
+  imageHeight: 1004,
+});
 
 const industries = [
   {

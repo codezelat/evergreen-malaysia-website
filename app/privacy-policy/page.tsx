@@ -1,12 +1,16 @@
-import type { Metadata } from "next";
 import { LegalPage, type LegalSection } from "@/components/pages/legal-page";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Privacy Policy",
   description:
     "How Evergreen Lighting Malaysia handles personal data, website enquiries, technical information, retention, and privacy requests.",
-  alternates: { canonical: "/privacy-policy" },
-};
+  path: "/privacy-policy",
+  image: "/images/pages/industry-designers.webp",
+  imageAlt: "Evergreen Lighting installation in a modern interior",
+  imageWidth: 2400,
+  imageHeight: 1004,
+});
 
 const sections: LegalSection[] = [
   {
@@ -166,17 +170,24 @@ const sections: LegalSection[] = [
   },
   {
     id: "children-links",
-    title: "Children and external links",
+    title: "Interactive maps and external links",
     content: (
       <>
         <p>
-          This business website is not directed to children, and we do not
-          knowingly request personal data from children through it.
+          Maps on the contact page are inactive until you choose “Load
+          interactive map”. If you load a map or open it in Google Maps, your
+          browser connects directly to Google. Google may receive technical
+          request data, including your IP address and browser information, and
+          will handle it under its own privacy terms.
         </p>
         <p>
           External websites and email services operate under their own privacy
           terms. We are not responsible for their practices and encourage you
           to review their notices before providing information.
+        </p>
+        <p>
+          This business website is not directed to children, and we do not
+          knowingly request personal data from children through it.
         </p>
       </>
     ),
@@ -208,7 +219,7 @@ export default function PrivacyPolicyPage() {
       eyebrow="Legal & Privacy"
       title="Privacy Policy"
       summary="A clear explanation of what information this website handles, why it may be used, and the choices available to you."
-      lastUpdated="27 July 2026"
+      lastUpdated="29 July 2026"
       path="/privacy-policy"
       sections={sections}
     />

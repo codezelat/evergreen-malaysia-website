@@ -1,12 +1,16 @@
-import type { Metadata } from "next";
 import { LegalPage, type LegalSection } from "@/components/pages/legal-page";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Cookie Policy",
   description:
     "Evergreen Lighting Malaysia’s current cookie and website storage practices.",
-  alternates: { canonical: "/cookie-policy" },
-};
+  path: "/cookie-policy",
+  image: "/images/pages/industry-designers.webp",
+  imageAlt: "Evergreen Lighting installation in a modern interior",
+  imageWidth: 2400,
+  imageHeight: 1004,
+});
 
 const sections: LegalSection[] = [
   {
@@ -69,14 +73,34 @@ const sections: LegalSection[] = [
     ),
   },
   {
+    id: "interactive-maps",
+    title: "Interactive maps",
+    content: (
+      <>
+        <p>
+          The contact page does not load Google Maps automatically. A map is
+          loaded only after you select “Load interactive map”, or you may
+          choose the separate link that opens Google Maps in a new tab.
+        </p>
+        <p>
+          After that choice, Google may receive technical request information
+          and may use cookies or similar technologies under its own terms. The
+          Evergreen website does not read or use those identifiers for
+          analytics or advertising.
+        </p>
+      </>
+    ),
+  },
+  {
     id: "future-changes",
     title: "Future changes",
     content: (
       <>
         <p>
-          If we introduce optional analytics, embedded services, or advertising
-          technologies in the future, we will update this policy and implement
-          an appropriate consent mechanism before using them where required.
+          If we introduce optional analytics, automatically loaded third-party
+          services, or advertising technologies in the future, we will update
+          this policy and implement an appropriate consent mechanism before
+          using them where required.
         </p>
         <p>
           Questions about this policy may be sent to{" "}
@@ -93,7 +117,7 @@ export default function CookiePolicyPage() {
       eyebrow="Legal & Privacy"
       title="Cookie Policy"
       summary="The current website is deliberately simple: no advertising trackers, no analytics cookies, and no unnecessary consent banner."
-      lastUpdated="27 July 2026"
+      lastUpdated="29 July 2026"
       path="/cookie-policy"
       sections={sections}
     />

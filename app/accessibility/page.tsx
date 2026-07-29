@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import { LegalPage, type LegalSection } from "@/components/pages/legal-page";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Accessibility",
   description:
     "Evergreen Lighting Malaysia's commitment to an inclusive and accessible website experience.",
-  alternates: {
-    canonical: "/accessibility",
-  },
-};
+  path: "/accessibility",
+  image: "/images/pages/industry-designers.webp",
+  imageAlt: "Evergreen Lighting installation in a modern interior",
+  imageWidth: 2400,
+  imageHeight: 1004,
+});
 
 const sections: LegalSection[] = [
   {

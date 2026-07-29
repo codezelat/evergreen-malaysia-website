@@ -1,17 +1,22 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { InnerPageHero } from "@/components/pages/inner-page-hero";
 import { PageCta } from "@/components/pages/page-cta";
 import { Reveal } from "@/components/ui/reveal";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "About Us",
   description:
     "Discover Evergreen Lighting Malaysia’s vision, experience, quality standards, and commitment to responsible lighting.",
-  alternates: { canonical: "/about-us" },
-};
+  path: "/about-us",
+  image: "/images/pages/about-hero-green.webp",
+  imageAlt:
+    "A naturally lit interior representing Evergreen Lighting Malaysia's sustainable approach",
+  imageWidth: 2400,
+  imageHeight: 2400,
+});
 
 const milestones = [
   {

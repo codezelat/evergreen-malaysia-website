@@ -3,23 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLink } from "@/components/ui/arrow-link";
 import { Reveal } from "@/components/ui/reveal";
+import { newsArticles } from "@/lib/news";
 
-const newsItems = [
-  {
-    title: "The Art of Architectural Innovation",
-    summary:
-      "How considered light, material, and form can turn practical spaces into memorable experiences.",
-    image: "/images/pages/industry-hero-decorative.webp",
-    date: "Design Insight",
-  },
-  {
-    title: "Sustainable Lighting Solutions",
-    summary:
-      "A practical look at efficient LED choices that reduce energy use without compromising atmosphere.",
-    image: "/images/pages/news-sustainable.webp",
-    date: "Sustainability",
-  },
+const featuredSlugs = [
+  "the-art-of-architectural-illumination",
+  "sustainable-lighting-solutions",
 ];
+
+const newsItems = featuredSlugs.flatMap((slug) => {
+  const article = newsArticles.find((item) => item.slug === slug);
+  return article ? [article] : [];
+});
 
 export function NewsSection() {
   return (
@@ -62,16 +56,16 @@ export function NewsSection() {
                 </div>
                 <div className="flex flex-col p-6 sm:p-7">
                   <p className="text-[0.62rem] font-bold uppercase tracking-[0.12em] text-evergreen-800">
-                    {item.date}
+                    {item.category} · {item.displayDate}
                   </p>
                   <h3 className="mt-3 text-xl font-bold leading-tight tracking-[-0.035em]">
                     {item.title}
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-black/58">
-                    {item.summary}
+                    {item.excerpt}
                   </p>
                   <Link
-                    href="/news-csr"
+                    href={`/news-csr/${item.slug}`}
                     aria-label={`Read ${item.title}`}
                     className="focus-ring mt-7 inline-flex items-center gap-2 self-start text-[0.68rem] font-bold uppercase tracking-[0.08em]"
                   >
