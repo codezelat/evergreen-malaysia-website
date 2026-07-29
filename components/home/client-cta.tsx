@@ -21,7 +21,7 @@ export function ClientCta() {
           brief, project goals, or the right collection for your environment.
         </p>
         <Link
-          href="mailto:evergreenlk@gmail.com"
+          href="/contact-us"
           className="focus-ring group mt-8 inline-flex min-h-12 items-center gap-3 bg-evergreen-600 px-7 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-evergreen-800"
         >
           Contact Us
